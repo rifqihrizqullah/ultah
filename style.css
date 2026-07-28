@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9ecf,#ffd6e7,#ffeef5);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero{
+    width:90%;
+    max-width:400px;
+    background:rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    animation:muncul 1.2s ease;
+}
+
+.hero h1{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    margin-bottom:15px;
+}
+
+.hero p{
+    line-height:1.8;
+    font-size:16px;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4081;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.hidden{
+    display:none;
+}
+
+#surat{
+    position:absolute;
+    width:90%;
+    max-width:420px;
+    background:white;
+    color:#444;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    text-align:center;
+    animation:muncul .8s;
+}
+
+#surat h2{
+    color:#ff4081;
+    margin-bottom:15px;
+}
+
+#surat p{
+    line-height:1.8;
+}
+
+@keyframes muncul{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* Styling Galeri Foto */
+.gallery-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gallery-container h3 {
+    color: #e91e63;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom foto */
+    gap: 12px;
+    padding: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Agar foto tidak gepeng */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #fff;
+}
+
+/* Efek saat foto ditekan/diklik di HP */
+.gallery-grid img:active, 
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(233, 30, 99, 0.4);
+}
+/* Ganti nama kelas di bawah sesuai dengan nama kelas kotak putihmu */
+.container {
+    max-height: 80vh;          /* Membatasi tinggi kotak agar tidak melebihi layar HP */
+    overflow-y: auto;          /* Mengaktifkan scroll vertikal */
+    -webkit-overflow-scrolling: touch; /* Membuat scroll terasa lebih mulus di HP */
+    padding: 20px;
+}
+body {
+    min-height: 100vh;
+    overflow-y: auto;          /* Pastikan TIDAK berisi 'overflow: hidden' */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Mengatur isi halaman mulai dari atas */
+    padding: 20px 0;
+}
+/* Mengatur tampilan scrollbar agar tetap estetik */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff758c;
+    border-radius: 10px;
+}
